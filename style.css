@@ -1,0 +1,210 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap);
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+
+body {
+    background-color: rgb(18, 18, 19);
+    color: #fff;
+}
+
+#load-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#load-container h1 {
+    font-size: 70px;
+}
+
+#load-container button {
+    border: 0;
+    outline: 0;
+    font-size: 30px;
+    padding: 5px 50px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#load-container button:hover {
+    transform: scale(1.2);
+}
+
+#game-container {
+    display: none;
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.row {
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: transparent;
+    border: 2px solid rgb(58, 58, 60);
+    padding: 30px;
+    margin: 2px;
+    width: 50px;
+    height: 50px;
+    perspective: 1000px;
+    transition: transform 1s ease;
+    transform-style: preserve-3d;
+}
+
+.typed {
+    border-color: rgb(86, 87, 88);
+    animation-name: typed;
+    animation-duration: 0.1s;
+}
+
+.flipped {
+    transform: rotateX(180deg) scaleY(-1);
+}
+
+.correct {
+    color: white;
+    background-color: rgb(83, 141, 78) !important;
+    border-color: rgb(83, 141, 78) !important;
+}
+
+.invalid {
+    color: white;
+    background-color: rgb(181, 159, 59) !important;
+    border-color: rgb(181, 159, 59) !important;
+}
+
+.wrong {
+    pointer-events: none;
+    disabled: true;
+    color: white;
+    background-color: rgb(58, 58, 60) !important;
+    border-color: rgb(58, 58, 60) !important;
+}
+
+.input-field {
+    border: 0;
+    outline: 0;
+    font-size: 24px;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 5px 10px;
+    box-shadow: 0 0 3px 1px rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    width: 350px;
+}
+
+.input-field:focus {
+    box-shadow: 0 0 10px 1px rgba(255, 255, 255, 0.5);
+}
+
+.input-button {
+    border: 0;
+    outline: 0;
+    font-size: 24px;
+    margin: 0 auto;
+    margin-top: 30px;
+    box-shadow: 0 0 3px 1px rgba(255, 255, 255, 0.5);
+    padding: 5px 10px;
+    box-shadow: 0 0 3px 1px rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    width: 350px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.input-button:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    transform: scale(1.05);
+}
+
+#message {
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.error {
+    color: red;
+}
+
+.success {
+    color: green;
+}
+
+/* Keyboard Styles */
+.keyboard-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.keyboard-row button {
+    border: 0;
+    outline: 0;
+    background-color: rgb(129, 131, 132);
+    border-radius: 5px;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.keyboard-row button:hover {
+    background-color: rgb(110, 110, 110);
+    transform: scale(1.05);
+}
+
+.enter {
+    width: 100px !important;
+}
+.key {
+    width: 50px;
+}
+.del {
+    width: 80px !important;
+}
+
+/* animations */
+@keyframes typed {
+    0% {
+        transform: scale(0.8);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
