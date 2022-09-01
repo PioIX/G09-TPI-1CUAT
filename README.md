@@ -16,4 +16,4 @@ Nosotros planteamos darle un giro a este juego, simplemente cambiando las palabr
 - Fomentar la resiliencia de los pobres y reducir su exposición y vulnerabilidad a los fenómenos extremos relacionados con el clima, desastres económicos, sociales y ambientales.
 
 
-[App en pythonanywhere](http://jbericua.pythonanywhere.com/)
+# [App en pythonanywhere](http://jbericua.pythonanywhere.com/)
